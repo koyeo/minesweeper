@@ -1,0 +1,18 @@
+version: 1.0
+servers:
+  cd:
+    host: 139.95.8.63
+    user: root                                 
+tasks:
+  deploy:                                                            
+    steps:
+      - run: cd frontend && yarn build        
+      - run: cd backend && go mod tidy && CGO_ENABLED=0  GOOS=linux  GOARCH=amd64 go build -o bin/minesweeper cmd/minesweeper/minesweeper.go
+      - deploy:
+          servers:
+            - use: cd                  
+          mappers:                             
+            - source: ./frontend/build                 
+              target: /app/minesweeper/web      
+            - source: ./backend/bin/minesweeper                
+              target: /app/minesweeper/minesweeper

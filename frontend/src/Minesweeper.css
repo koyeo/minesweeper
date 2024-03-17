@@ -1,0 +1,102 @@
+
+.grid {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.levels {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #787373;
+}
+
+.debug {
+    display: flex;
+    justify-content: end;
+}
+
+.status {
+    font-size: 38px;
+    cursor: default;
+}
+
+.cell {
+    border: 1px solid #b9b9b9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5fb174;
+    cursor: default;
+    font-weight: bold;
+    font-size: 20px;
+    color: #cddc39;
+}
+
+.cell.disable {
+    background: #d7d7d7;
+}
+
+.cell.trigger {
+    background: red;
+}
+
+.mine {
+    width: 20px;
+}
+
+.flag {
+    width: 20px;
+}
+
+.mine-flag {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #333;
+}
+
+.mine-flag img {
+    width: 15px;
+}
+
+.tip-1 {
+    color: #4150be;
+}
+
+.tip-2 {
+    color: #1e6409;
+}
+
+.tip-3 {
+    color: #AB0707;
+}
+
+.tip-4 {
+    color: #0f0f8c;
+}
+
+.tip-5 {
+    color: #7d0707;
+}
+
+.tip-6 {
+    color: #077d7d;
+}
+
+.tip-7 {
+    color: #aa0707;
+}
+
+.tip-8 {
+    color: #aa0d14;
+}
